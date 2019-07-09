@@ -3,14 +3,17 @@
   "main": "__init__.py",
   "inputs": [],
   "author": "vivekksi",
+  "description": "",
   "entitlements": [
     "public"
   ],
-  "groups": [],
+  "groups": [
+    "props_admins"
+  ],
   "contributors": [
     "matrich"
   ],
-  "minutes_saved": 0,
+  "minutes_saved": null,
   "labels": [],
   "service": "python3",
   "timeOut": 60000
