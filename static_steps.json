@@ -1,1 +1,57 @@
-""" static_steps.json """
+{
+    "requisite":
+    {
+        "any":
+        [
+        "...,"..., "...."
+        ],
+        "all":
+        [
+        "...",
+        "..."  
+        ]
+    },
+    "type_of_issue":
+    [
+    ],
+    "meta_data":
+    {
+        "tech":"wxm",
+        "format":"text",
+        "is_static":true,
+        "fe_name":"....",
+        "fe_description": "....",
+        "outcome": "..."
+    },
+    "steps":
+    [
+        {
+            "is_loop": false,
+            "for_case_note": false,
+            "id":1,
+            "title":"...",
+            "detail":
+            [
+                "....",
+                "....",
+                "<<img>>..."
+
+            ],
+            "help": ""
+        },
+        {
+            "is_loop": false,
+            "for_case_note": false,
+            "id":2,
+            "title":"...",
+            "detail":
+            [
+                "....",
+                "....",
+                "<<img>>..."
+
+            ],
+            "help": ""
+        }
+    ]
+}
