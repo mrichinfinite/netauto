@@ -1,0 +1,17 @@
+{
+  "name": "aqua_wxm_audio_1",
+  "main": "__init__.py",
+  "inputs": [],
+  "author": "vivekksi",
+  "entitlements": [
+    "public"
+  ],
+  "groups": [],
+  "contributors": [
+    "matrich"
+  ],
+  "minutes_saved": 0,
+  "labels": [],
+  "service": "python3",
+  "timeOut": 60000
+}
