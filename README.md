@@ -1,2 +1,0 @@
-# netauto
-Network automation scripts
