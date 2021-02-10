@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 """
-Author: Nick Russo
+Authors: Nick Russo & Matthew Rich
 Purpose: Demonstrate using SSH via paramiko to get information from
 the network and write it to a file for future reference.
 """
@@ -39,7 +39,7 @@ def main():
     }
 
     # For each host in the inventory dict, extract key and value
-    for hostname, vrf_cmd in host_dict.items():
+    for hostname, cmd in host_dict.items():
         # Paramiko can be SSH client or server; use client here
         conn_params = paramiko.SSHClient()
 
@@ -64,7 +64,7 @@ def main():
         commands = [
             "terminal length 0",
             "show version | include Software,",
-            vrf_cmd,
+            cmd,
         ]
         concat_output = ""
         for command in commands:

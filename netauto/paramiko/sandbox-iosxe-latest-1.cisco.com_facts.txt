@@ -4,9 +4,9 @@ Cisco IOS XE Software, Version 17.03.01a
 csr1000v-1#show running-config
 Building configuration...
 
-Current configuration : 7167 bytes
+Current configuration : 6689 bytes
 !
-! Last configuration change at 17:00:12 UTC Wed Feb 3 2021 by developer
+! Last configuration change at 16:50:11 UTC Wed Feb 10 2021 by developer
 !
 version 17.3
 service timestamps debug datetime msec
@@ -148,7 +148,6 @@ spanning-tree extend system-id
 !
 username developer privilege 15 secret 9 $9$oNguEA9um9vRx.$MsDk0DOy1rzBjKAcySWdNjoKcA7GetG9YNnKOs8S67A
 username root privilege 15 secret 9 $9$IRHgr7MCAEFNLk$ZfOrXoRLFhh6gHIxhLPfOC9KzjIWISv4KqkNAR51kmI
-username cisco privilege 15 secret 9 $9$PHL2NeOeqIIRRE$88BcKlj0qbC56JBKwF5IXukZGQq7DZQFjn.EsbdVz7w
 !
 redundancy
 !
@@ -176,13 +175,6 @@ redundancy
 ! 
 !
 !
-interface Loopback1
- description RESTCONF-TEST
- ip address 1.1.1.1 255.255.255.0
-!
-interface Loopback34
- ip address 34.34.34.34 255.255.255.255
-!
 interface GigabitEthernet1
  description MANAGEMENT INTERFACE - DON'T TOUCH ME
  ip address 10.10.20.48 255.255.255.0
@@ -191,7 +183,7 @@ interface GigabitEthernet1
  no mop sysid
 !
 interface GigabitEthernet2
- description This is test
+ description Network Interface
  no ip address
  shutdown
  negotiation auto
@@ -199,17 +191,12 @@ interface GigabitEthernet2
  no mop sysid
 !
 interface GigabitEthernet3
- description Description set with Nornir Netmiko v3
+ description Network Interface
  no ip address
  shutdown
  negotiation auto
  no mop enabled
  no mop sysid
- service instance 1 ethernet
- !
-!
-router ospf 34
- network 34.34.34.34 0.0.0.0 area 34
 !
 ip forward-protocol nd
 ip http server
@@ -221,10 +208,6 @@ ip ssh rsa keypair-name ssh-key
 ip ssh version 2
 ip scp server enable
 !
-ip access-list extended TEST2
- 10 deny   ip 192.168.66.0 0.0.0.255 any
- 20 deny   ip 10.10.20.0 0.0.0.255 any
- 30 permit ip any any
 !
 !
 !
