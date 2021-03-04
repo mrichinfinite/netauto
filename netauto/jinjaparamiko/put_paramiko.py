@@ -49,9 +49,7 @@ def main():
         j2_env = Environment(
             loader=FileSystemLoader("."), trim_blocks=True, autoescape=True
         )
-        template = j2_env.get_template(
-            f"config.j2"
-        )
+        template = j2_env.get_template(f"config.j2")
         new_config = template.render(data=config)
         
         # Create paramiko SSH client to connect to the device

@@ -1,0 +1,5 @@
+# Define list of hosts
+---
+host_list:
+  -name: "sandbox-iosxe-latest-1.cisco.com"
+  -platform: cisco_ios

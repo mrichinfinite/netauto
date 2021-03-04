@@ -4,9 +4,9 @@ Cisco IOS XE Software, Version 17.03.01a
 csr1000v-1#show running-config
 Building configuration...
 
-Current configuration : 6689 bytes
+Current configuration : 6802 bytes
 !
-! Last configuration change at 16:50:11 UTC Wed Feb 10 2021 by developer
+! Last configuration change at 20:10:18 UTC Thu Mar 4 2021 by developer
 !
 version 17.3
 service timestamps debug datetime msec
@@ -174,6 +174,12 @@ redundancy
 ! 
 ! 
 !
+!
+interface Loopback1
+ ip address 2.2.2.2 255.255.255.0
+!
+interface Loopback6
+ ip address 2.3.4.5 255.255.255.255
 !
 interface GigabitEthernet1
  description MANAGEMENT INTERFACE - DON'T TOUCH ME
