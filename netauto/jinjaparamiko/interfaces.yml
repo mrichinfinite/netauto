@@ -1,0 +1,6 @@
+# Define the interface configuration
+---
+interfaces:
+  -name: "GigabitEthernet3"
+  -description: "Network Interface"
+
